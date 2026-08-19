@@ -7,9 +7,9 @@
 // ============================================
 const PRODUCT_DATA = [
   // CCTV Camera
-  { category: "cctv-camera", categoryLabel: "CCTV Camera", name: "Solar Camera", image: "assets/images/solar-cctv.jpg" },
   { category: "cctv-camera", categoryLabel: "CCTV Camera", name: "4G & 5G Camera", image: "assets/images/4g-cctv.jpg" },
   { category: "cctv-camera", categoryLabel: "CCTV Camera", name: "IP & HD Cameras", image: "assets/images/cctvs.jpg" },
+  { category: "cctv-camera", categoryLabel: "CCTV Camera", name: "Solar Camera", image: "assets/images/solar-cctv.jpg" },
   { category: "cctv-camera", categoryLabel: "CCTV Camera", name: "NVR & DVR", image: "assets/images/nvr-dvr-cctv.jpg" },
 
   // Biometrics
@@ -31,7 +31,10 @@ const PRODUCT_DATA = [
 
   // Automation
   { category: "automation", categoryLabel: "Automation", name: "Gate Automation", image: "assets/images/gate-automation-system.jpg" },
-  { category: "automation", categoryLabel: "Automation", name: "Home Automation Switches", image: "assets/images/home-automation-systems.jpg" },
+  { category: "automation", categoryLabel: "Automation", name: "Home Automation Switches", image: "assets/images/home-switch.jpg" },
+
+  //Networking
+  { category: "networking", categoryLabel: "Networking", name: "Networking", image: "assets/images/networking.jpg" },
 ];
 
 const CAMERA_PLACEHOLDER_ICON = `
@@ -113,4 +116,13 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
   initFilters();
   initNavToggle();
+
+  // Intro Animation
+  document.body.style.overflow = "hidden";
+
+  setTimeout(() => {
+    const intro = document.getElementById("introScreen");
+    intro.classList.add("hide");
+    document.body.style.overflow = "auto";
+  }, 2000);
 });
