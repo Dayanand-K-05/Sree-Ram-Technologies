@@ -605,3 +605,62 @@ section .eyebrow::before { background: var(--navy-mid); box-shadow: 0 0 0 3px rg
   .own-brand-strip { flex-direction: column; align-items: flex-start; }
   .own-brand-strip .ob-note { text-align: left; max-width: none; }
 }
+
+/* ============================================
+   Opening Animation Screen
+============================================ */
+.intro-screen{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#12143a,#23278a);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  transition:opacity .8s ease, visibility .8s ease;
+}
+
+.intro-screen.hide{
+  opacity:0;
+  visibility:hidden;
+}
+
+.intro-content{
+  text-align:center;
+  color:#fff;
+  animation:logoReveal 2s ease forwards;
+}
+
+.intro-content img{
+  width:120px;
+  margin:auto;
+  margin-bottom:15px;
+}
+
+.intro-content h1{
+  font-size:2.2rem;
+  color:#fff;
+  margin-bottom:8px;
+}
+
+.intro-content p{
+  color:#f5d200;
+  font-size:1rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+@keyframes logoReveal{
+  0%{
+    opacity:0;
+    transform:scale(0.5);
+  }
+  60%{
+    opacity:1;
+    transform:scale(1.15);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1);
+  }
+}
