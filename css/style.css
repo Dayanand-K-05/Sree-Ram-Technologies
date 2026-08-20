@@ -330,7 +330,7 @@ section .eyebrow::before { background: var(--navy-mid); box-shadow: 0 0 0 3px rg
   background: var(--navy-ink);
   border-top: 1px solid var(--line-dark);
   border-bottom: 1px solid var(--line-dark);
-  padding: clamp(2rem, 5vw, 3rem) 0;
+  padding: clamp(4rem, 5vw, 3rem) 0;
 }
 .stats-grid {
   display: grid;
